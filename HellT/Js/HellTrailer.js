@@ -21,19 +21,24 @@ let videoB = document.querySelector('.videoB')
 
 function veri() {
 
+  
   foto.style.minHeight = '0px'
   foto.style.maxHeight = '0px'
+  foto.style.transition = '1s'
   foto.style.position = 'absolute'
  
-  botao.style.width = '0px'
-  botao1.style.width = '0px'
+  botao.style.height = '0px'
+  botao1.style.height = '0px'
 
   caixa1.style.minHeight = '400px'
   caixa1.style.maxHeight = '800px'
 
   
- 
-    video.innerHTML = '<iframe class="videoH" src="https://www.youtube.com/embed/ic9ZGjTqCs8?si=94ehohzBPmcEn-eW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+  video.style.height = '100%'
+    
+  video.innerHTML = '<iframe class="videoH" src="https://www.youtube.com/embed/ic9ZGjTqCs8?si=94ehohzBPmcEn-eW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+  
+   
      
 }
 
@@ -52,6 +57,7 @@ function veriB() {
   caixaB1.style.minHeight = '400px'
   caixaB1.style.maxHeight = '800px'
 
+  videoB.style.height = '100%'
   videoB.innerHTML = '<iframe class="videoB" src="https://www.youtube.com/embed/3VYGOkMnGCE?si=gYLZPdxnkkQXnZWd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'  
 }
 
@@ -64,14 +70,15 @@ function veriB() {
 
 
 let sc = document.querySelector('.setcimaH')
-sc.addEventListener('click', scima)
+sc.addEventListener('click', sbaixo)
 let setcima = document.querySelector('.setcimaH')
 
 
 
-function scima(){
+function sbaixo(){ //Parte de cima que vai fechar
+  
+    //                                CIMA
    caixa.style.height =  '0vh'
-   
    //Os 2 codigo abaixo são para dar uma animação ao quadrado da parte de cima na hora de desce ou subir.
    caixa1.style.minWidth = '130px'
    caixa1.style.maxWidth = '0px'
@@ -81,6 +88,31 @@ function scima(){
   //Esses 2 com inicio de 'set' são para não fica feio na hora da animação
    setcima.style.display = 'none'
    setbaixo.style.display = 'block'
+  
+   
+
+  
+   video.style.display = 'none'
+
+  if(videoB.style.display == 'none') {
+    videoB.style.display = 'block'
+
+    fotoB.style.minHeight = '320px'
+    fotoB.style.maxHeight = '300px'
+    fotoB.style.position = 'initial'
+
+    videoB.style.position = 'absolute'
+    videoB.style.height = '0%'
+    
+   // video.innerHTML = ''
+    video.style.height = '0%'
+    
+      botaoB.style.width = '90px'
+      botaoB1.style.width = '100%'
+
+  }
+   
+//                                  FIM DO CIMA
 
 //                                  BAIXO
 caixaB.style.height = '100vh'
@@ -93,22 +125,25 @@ fotoB.style.maxHeight = '300px'
 logoB.style.height = '15vh'
 
 
-botaoB1.style.height = '90px'
-//                                    FIM DO BAIXO
+      botaoB.style.width = '90px'
+      botaoB1.style.width = '100%'
+//                                  FIM DO BAIXO
 
 }
 
 
 let des = document.querySelector('.Setbaixo')
-des.addEventListener('click', sbaixo)
+des.addEventListener('click', scima)
 let setbaixo = document.querySelector('.Setbaixo')
 
-function sbaixo() {
+function scima() { //Parte de baixo que vai fechar
+
+  //                                CIMA
   //Esses 2 com inicio de 'set' são para não fica feio na hora da animação
   setcima.style.display = 'block'
   setbaixo.style.display = 'none'
+ 
 
-  foto.style.height = '100%'
   caixa.style.height =  '100vh'
    //Os 2 codigo abaixo e para animação da 'caixa1' quando subir a tela
   caixa1.style.minWidth = '320px'
@@ -117,10 +152,37 @@ function sbaixo() {
   caixa1.style.minHeight = '320px'
   caixa1.style.maxHeight = '800px'
   
+  
   logo.style.height = '18vh'
   botao1.style.height = '86px'
   
+  videoB.style.display = 'none'
+  if(video.style.display == 'none') { //Video de da parte de cima
 
+    video.style.display = 'block'
+
+    videoB.style.height = '0%'
+   // videoB.innerHTML = ''
+
+    video.style.height = '0%'
+    video.style.position = 'absolute'
+    
+
+ 
+  
+    foto.style.minHeight = '320px'
+    foto.style.maxHeight = '300px'
+    foto.style.transition = '0s'
+    foto.style.position = 'initial'
+   
+    botao.style.height = '100%'
+    botao1.style.height = '86px' 
+    
+      }
+ 
+
+    
+//                                  FIM DO CIMA
  
 //                                  BAIXO
 caixaB.style.height = '0vh'
@@ -133,8 +195,10 @@ fotoB.style.maxHeight = '0px'
 logoB.style.height = '0px'
 
 
-botaoB1.style.height = '0px'
+      botaoB.style.width = '0px'
+      botaoB1.style.width = '0%'
 
-
+ 
+//                                  FIM DO BAIXO
 }
 
