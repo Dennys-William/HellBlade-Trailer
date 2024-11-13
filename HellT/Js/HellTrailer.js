@@ -24,7 +24,7 @@ function veri() {
   
   foto.style.minHeight = '0px'
   foto.style.maxHeight = '0px'
-  foto.style.transition = '1s'
+  foto.style.transition = '0.6s'
   foto.style.position = 'absolute'
  
   botao.style.height = '0px'
@@ -35,9 +35,10 @@ function veri() {
 
   
   video.style.height = '100%'
-    
-  video.innerHTML = '<iframe class="videoH" src="https://www.youtube.com/embed/ic9ZGjTqCs8?si=94ehohzBPmcEn-eW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
   
+  video.style.visibility = 'visible'
+  video.innerHTML = '<iframe class="videoH" src="https://www.youtube.com/embed/ic9ZGjTqCs8?si=94ehohzBPmcEn-eW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+ 
    
      
 }
@@ -58,15 +59,9 @@ function veriB() {
   caixaB1.style.maxHeight = '800px'
 
   videoB.style.height = '100%'
+  videoB.style.visibility = 'visible'
   videoB.innerHTML = '<iframe class="videoB" src="https://www.youtube.com/embed/3VYGOkMnGCE?si=gYLZPdxnkkQXnZWd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'  
 }
-
-
-
-
-
-
-
 
 
 let sc = document.querySelector('.setcimaH')
@@ -91,8 +86,17 @@ function sbaixo(){ //Parte de cima que vai fechar
   
    
 
-  
+   
    video.style.display = 'none'
+
+  
+   video.style.height = '0%'
+
+
+   setTimeout(function() {
+   video.innerHTML = '<iframe class="videoH"></iframe>'
+   },1000)
+
 
   if(videoB.style.display == 'none') {
     videoB.style.display = 'block'
@@ -103,12 +107,11 @@ function sbaixo(){ //Parte de cima que vai fechar
 
     videoB.style.position = 'absolute'
     videoB.style.height = '0%'
+    videoB.style.visibility = 'hidden'
+
     
-   // video.innerHTML = ''
-    video.style.height = '0%'
-    
-      botaoB.style.width = '90px'
-      botaoB1.style.width = '100%'
+    botaoB.style.width = '90px'
+    botaoB1.style.width = '100%'
 
   }
    
@@ -153,32 +156,43 @@ function scima() { //Parte de baixo que vai fechar
   caixa1.style.maxHeight = '800px'
   
   
+  
   logo.style.height = '18vh'
   botao1.style.height = '86px'
   
-  videoB.style.display = 'none'
-  if(video.style.display == 'none') { //Video de da parte de cima
 
-    video.style.display = 'block'
+  //videosBB
+      videoB.style.display = 'none'
+      
+      videoB.style.height = '0%'
+     
+      setTimeout(function() {
+        videoB.innerHTML = '<iframe class="videoB"></iframe>'
+        },1000)
 
-    videoB.style.height = '0%'
-   // videoB.innerHTML = ''
 
-    video.style.height = '0%'
-    video.style.position = 'absolute'
+       if(video.style.display == 'none') { //Video de da parte de cima
+
+        video.style.display = 'block'
     
-
- 
-  
-    foto.style.minHeight = '320px'
-    foto.style.maxHeight = '300px'
-    foto.style.transition = '0s'
-    foto.style.position = 'initial'
-   
-    botao.style.height = '100%'
-    botao1.style.height = '86px' 
+       
     
-      }
+        video.style.height = '0%'
+        video.style.visibility = 'hidden'
+        video.style.position = 'absolute'
+        
+    
+       
+      
+        foto.style.minHeight = '320px'
+        foto.style.maxHeight = '300px'
+        foto.style.transition = '0s'
+        foto.style.position = 'initial'
+       
+        botao.style.height = '100%'
+        botao1.style.height = '86px' 
+     
+          }
  
 
     
