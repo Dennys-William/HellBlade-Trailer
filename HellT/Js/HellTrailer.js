@@ -37,7 +37,7 @@ function veri() {
   video.style.height = '100%'
   
   video.style.visibility = 'visible'
-  video.innerHTML = '<iframe class="videoH" src="https://www.youtube.com/embed/ic9ZGjTqCs8?si=94ehohzBPmcEn-eW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+  video.innerHTML = '<iframe class="videoH" src="https://www.youtube.com/embed/KQ46A0hXPYY?si=o5s0v8FShxaLlU1I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
  
    
      
