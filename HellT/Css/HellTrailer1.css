@@ -8,18 +8,21 @@
    
     overflow: hidden; 
     position: relative;
-    transition: 0.6s;
+    transition: 1s;
   }
 
   .Setbaixo {
     width: 70px;
     height: 70px;
-    background: white;
+    background: white; 
     border-radius: 500px;
     left: 50%;
     top: 0%;
     transform: translateX(-50%);
     position: absolute;
+    }
+    .Setbaixo:hover {
+     background: rgba(177, 167, 167, 0.957);   
     }
 
 .caixaB1 {
@@ -30,14 +33,14 @@
     top: 50%;
     transform: translateY(-50%);
     margin: auto;
-
+    
     min-width: 320px;
     max-width: 500px;
     
     min-height: 0px;
     max-height: 0px;
     
-    transition: 1.5s;
+    transition: 1s;
 }
 .fotoB {
     width: 100%;
@@ -45,17 +48,18 @@
     min-height: 0px;
     max-height: 0px;
     border-radius: 15px;
-    transition: 1s;
+    transition: 0.6s;
     object-fit: cover;
+    
 }
 .videoB {
-    transition: 1s;
+    transition: 0.6s;
     border-radius: 15px;
     width: 100%;
     height: 100%;
     object-fit: cover;
     position: absolute;
-   
+ 
 }
 
 .botaoB {
@@ -84,7 +88,7 @@
 .trailer {
     color: white;
     left: 50%;
-    top: 1%;
+    top: 101%;
     transform: translateX(-50%);
     position: absolute;
     width: 100%;
