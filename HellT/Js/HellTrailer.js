@@ -19,6 +19,23 @@ let botaoB1 = document.querySelector('.botaoB1')
 let videoB = document.querySelector('.videoB')
 //
 
+
+
+setTimeout(() =>{
+  //setcima.style.display = 'block'
+  //setbaixo.style.display = 'none'
+  //caixa.style.height =  '100vh'
+  caixa1.style.transition = '1.5s'
+  caixa1.style.minWidth = '320px'
+  caixa1.style.maxWidth = '500px'
+  botao.style.width = '90px'
+  //caixa1.style.minHeight = '320px'
+ // caixa1.style.maxHeight = '800px'
+ // logo.style.height = '18vh'
+ // botao1.style.height = '86px'
+},1000)
+
+
 function veri() {
 
   
