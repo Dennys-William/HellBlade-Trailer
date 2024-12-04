@@ -17,22 +17,17 @@ let logoB1 = document.querySelector('.logoB1')
 let botaoB = document.querySelector('.botaoB')
 let botaoB1 = document.querySelector('.botaoB1')
 let videoB = document.querySelector('.videoB')
-//
+
 
 
 
 setTimeout(() =>{
-  //setcima.style.display = 'block'
-  //setbaixo.style.display = 'none'
-  //caixa.style.height =  '100vh'
+  
   caixa1.style.transition = '1.5s'
   caixa1.style.minWidth = '320px'
   caixa1.style.maxWidth = '500px'
   botao.style.width = '90px'
-  //caixa1.style.minHeight = '320px'
- // caixa1.style.maxHeight = '800px'
- // logo.style.height = '18vh'
- // botao1.style.height = '86px'
+ 
 },1000)
 
 
@@ -54,7 +49,16 @@ function veri() {
   video.style.height = '100%'
   
   video.style.visibility = 'visible'
-  video.innerHTML = '<iframe class="videoH" src="https://www.youtube.com/embed/OnaIgCIDOWM?si=lnK3BkMSJM1CC2zT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'
+  video.innerHTML = `
+  <iframe class="videoH" 
+          src="https://www.youtube.com/embed/OnaIgCIDOWM?autoplay=1&rel=0" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          referrerpolicy="strict-origin-when-cross-origin" 
+          allowfullscreen>
+  </iframe>`;
+
  
    
      
@@ -77,7 +81,16 @@ function veriB() {
 
   videoB.style.height = '100%'
   videoB.style.visibility = 'visible'
-  videoB.innerHTML = '<iframe class="videoB" src="https://www.youtube.com/embed/3VYGOkMnGCE?si=gYLZPdxnkkQXnZWd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>'  
+  videoB.innerHTML = `
+  <iframe class="videoB" 
+          src="https://www.youtube.com/embed/3VYGOkMnGCE?autoplay=1&rel=0" 
+          title="YouTube video player" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          referrerpolicy="strict-origin-when-cross-origin" 
+          allowfullscreen>
+  </iframe>`;
+  
 }
 
 
@@ -232,4 +245,3 @@ logoB.style.height = '0px'
  
 //                                  FIM DO BAIXO
 }
-
