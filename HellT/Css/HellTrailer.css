@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+body {
+  background: #293748;
+}
+
 .logoH {
   width: 100%;
   height: 18vh;
@@ -142,9 +146,5 @@
   padding: 1vh;
   
 }
-
-
-
-
 
 
